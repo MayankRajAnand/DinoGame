@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    
+}
+
+#container {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#container #dino {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+
+#container #dino img {
+    height: 70px;
+    width: 70px;
+    
+}
+
+.dinoActive {
+    animation: animateDino 0.5s linear infinite;
+}
+
+@keyframes animateDino {
+
+    0%,
+    100% {
+        bottom: 25px;
+    }
+
+    45%,
+    55% {
+        bottom: 160px;
+    }
+}
+
+#container #block {
+    height: 70px;
+    width: 125px;
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+}
+
+#container #block img {
+    height: 70px;
+    width: 125px;
+}
+
+.blockActive {
+    animation: blockAnimate 1s linear infinite;
+}
+
+@keyframes blockAnimate {
+    0% {
+        right: -100px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+#container #road {
+    height: 30px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container #road img {
+    height: 30px;
+    width: 2000px;
+    position: absolute;
+    left: 0;
+    
+}
+.roadActive{
+    animation:roadAnimate 1.5s linear infinite;
+}
+
+@keyframes roadAnimate {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -800px;
+    }
+}
+
+#container #cloud {
+    height: 80px;
+    width: 1200px;
+    border-radius: 40px;
+    position: absolute;
+    top: 30px;
+}
+
+#cloud img{
+    padding-left:10px;
+}
+.cloudActive{
+    animation:cloudAnimate 5s linear infinite;
+}
+
+@keyframes cloudAnimate {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 1%;
+    right: 50%
+}
+
+#gameOver {
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left:40%;
+    top:40%;
+    color: #525252;
+    text-align: center;
+}
+.mode button{
+    height:80px;
+    width:100px;
+}
+
+.hide{
+    display:none;
+}
